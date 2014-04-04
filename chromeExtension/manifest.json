@@ -1,0 +1,46 @@
+{
+    "name": "Magic Caramba",
+    "version": "1.1",
+    "description": "Highlight caramba components",
+    "background": {
+        "scripts": ["background.js", "jquery.min.js", "jquery-ui.min.js"]
+    },
+    "page_action": {
+        "default_icon": "sandwich-19.png",
+        "default_title": "Caramba is incredible"
+    },
+
+    "permissions": [
+        "tabs", "http://*/btts/*", "https://*/btts/*" , "http://*/btts-intake/*", "http://www.google.be/*"],
+
+    "content_scripts": [
+        {
+            "js": [
+                "jquery.min.js",
+                "jquery-ui.min.js",
+                "content.js"
+            ],
+            "matches": [ "http://*/btts/*", "https://*/btts/*" , "http://*/btts-intake/*", "http://www.google.be/*"],
+            "run_at": "document_end"
+        }
+    ],
+    "icons": {
+        "48": "sandwich-48.png",
+        "128": "sandwich-128.png"
+    },
+    "commands": {
+        "toggle-feature": {
+            "suggested_key": {
+                "default": "Ctrl+B"
+            },
+            "description": "Send a 'toggle-feature' event to the extension"
+        },
+        "_execute_browser_action": {
+            "suggested_key": {
+                "default": "Ctrl+B",
+                "mac": "MacCtrl+B"
+            }
+        }
+    },
+    "manifest_version": 2
+}

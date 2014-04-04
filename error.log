@@ -1,0 +1,22 @@
+rror during dispatching of java.awt.event.KeyEvent[KEY_PRESSED,keyCode=36,keyText=Home,keyChar=Undefined keyChar,modifiers=Ctrl+Alt,extModifiers=Ctrl+Alt,keyLocation=KEY_LOCATION_STANDARD,rawCode=36,primaryLevelUnicode=0,scancode=71] on frame0: Argument 0 for @NotNull parameter of com/intellij/psi/impl/search/PsiSearchHelperImpl.processUsagesInNonJavaFiles must not be null
+java.lang.IllegalArgumentException: Argument 0 for @NotNull parameter of com/intellij/psi/impl/search/PsiSearchHelperImpl.processUsagesInNonJavaFiles must not be null
+	at com.intellij.psi.impl.search.PsiSearchHelperImpl.processUsagesInNonJavaFiles(PsiSearchHelperImpl.java)
+	at com.bics.caramba.plugin.CarambaRelatedFilesProvider.getCarambaFileName(CarambaRelatedFilesProvider.java:154)
+	at com.bics.caramba.plugin.CarambaRelatedFilesProvider.createJavaItem(CarambaRelatedFilesProvider.java:122)
+	at com.bics.caramba.plugin.CarambaRelatedFilesProvider.getItems(CarambaRelatedFilesProvider.java:39)
+	at com.intellij.ide.actions.GotoRelatedFileAction.getItems(GotoRelatedFileAction.java:224)
+	at com.intellij.ide.actions.GotoRelatedFileAction.actionPerformed(GotoRelatedFileAction.java:57)
+	at com.intellij.openapi.keymap.impl.IdeKeyEventDispatcher$3.performAction(IdeKeyEventDispatcher.java:542)
+	at com.intellij.openapi.keymap.impl.IdeKeyEventDispatcher.processAction(IdeKeyEventDispatcher.java:590)
+	at com.intellij.openapi.keymap.impl.IdeKeyEventDispatcher.d(IdeKeyEventDispatcher.java:458)
+	at com.intellij.openapi.keymap.impl.IdeKeyEventDispatcher.dispatchKeyEvent(IdeKeyEventDispatcher.java:206)
+	at com.intellij.ide.IdeEventQueue._dispatchEvent(IdeEventQueue.java:524)
+	at com.intellij.ide.IdeEventQueue.b(IdeEventQueue.java:420)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.java:378)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:269)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:184)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:174)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:169)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+

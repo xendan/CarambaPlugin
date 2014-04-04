@@ -1,0 +1,20 @@
+{
+    "name": "Magic Caramba Sender",
+    "version": "1.1",
+    "description": "Sends to intellij ",
+    "app": {
+        "background": {
+            "scripts": ["background.js"]
+        }
+    },
+    "permissions": [
+        {"socket": [
+            "tcp-connect:localhost:4455"]}
+    ],
+
+"manifest_version": 2 ,
+    "icons" : {
+        "48" : "sandwich-48.png",
+        "128" : "sandwich-128.png"
+    }
+}

@@ -1,0 +1,26 @@
+<idea-plugin version="2">
+  <name>The Magic Caramba</name>
+  <description>Use CTR + ALT + HOME to jump to jsp from java and vice versa. See what field are not used</description>
+  <version>1.0</version>
+  <vendor>Bics</vendor>
+  <idea-version since-build="8000"/>
+
+  <application-components>
+      <component>
+          <implementation-class>com.bics.caramba.plugin.CarambaComponent</implementation-class>
+      </component>
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+  <extensions defaultExtensionNs="com.intellij">
+      <gotoRelatedProvider implementation="com.bics.caramba.plugin.CarambaRelatedFilesProvider"/>
+      <implicitUsageProvider implementation="com.bics.caramba.plugin.CarambaImplicitUsageProvider"/>
+  </extensions>
+</idea-plugin>
